@@ -14,6 +14,7 @@ import SwiftUI
 import WishKitShared
 import Combine
 
+@MainActor
 public struct WishKit {
     
     private static var subscribers: Set<AnyCancellable> = []
