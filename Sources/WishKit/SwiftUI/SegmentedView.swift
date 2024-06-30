@@ -25,9 +25,11 @@ struct SegmentedView: View {
     }
 }
 
+
 extension WishState: Identifiable {
     public var id: Self { self }
 
+    @MainActor
     public var description: String {
         switch self {
         case .approved:
