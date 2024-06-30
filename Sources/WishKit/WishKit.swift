@@ -14,7 +14,6 @@ import SwiftUI
 import WishKitShared
 import Combine
 
-@MainActor
 public struct WishKit {
     
     private static var subscribers: Set<AnyCancellable> = []
@@ -23,8 +22,10 @@ public struct WishKit {
 
     static var user = User()
 
+    @MainActor
     public static var theme = Theme()
 
+    @MainActor
     public static var config = Configuration()
 
     #if canImport(UIKit) && !os(visionOS)
